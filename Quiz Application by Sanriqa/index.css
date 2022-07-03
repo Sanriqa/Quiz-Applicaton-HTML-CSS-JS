@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: #009688;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.ozel-kutu {
+    max-width: 700px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.ozel-kutu::before,
+.ozel-kutu::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.ozel-kutu.gizle {
+    display: none;
+}
+
+.giris-kutu h3 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.giris-kutu p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.giris-kutu p span {
+    font-weight: 500;
+}
+
+.giris-kutu .btn {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.quiz-kutu .soru-sayi,
+.quiz-kutu .soru-yazi,
+.quiz-kutu .secenek-sec,
+.quiz-kutu .diger-soru-btn,
+.quiz-kutu .soru-gostergesi {
+    width: 100%;
+    float: left;
+}
+
+.quiz-kutu .soru-sayi {
+    font-size: 18px;
+    color: #009688;
+    font-weight: 600;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+
+}
+
+.quiz-kutu .soru-yazi {
+    font-size: 22px;
+    color: #000000;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.quiz-kutu .secenek-sec .secenek {
+    background-color: #cccccc;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-kutu .secenek-sec .secenek.cevaplandı {
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.quiz-kutu .secenek-sec .secenek.dogru::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-kutu .secenek-sec .secenek.yanlis::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+.quiz-kutu .secenek-sec .secenek.yanlis {
+    color: #ffffff;
+}
+
+.quiz-kutu .secenek-sec .secenek.dogru {
+    color: #ffffff;
+}
+
+.quiz-kutu.btn {
+    margin: 15px 0;
+}
+
+.quiz-kutu .soru-gostergesi {
+    border-top: 1px solid #cccccc;
+    margin-top: 15px;
+}
+
+.quiz-kutu .soru-gostergesi div {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 3px;
+
+}
+
+.quiz-kutu .soru-gostergesi div.dogru {
+    background-color: green;
+    background-image: url("img/correct.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.quiz-kutu .soru-gostergesi div.yanlis {
+    background-color: red;
+    background-image: url("img/wrong.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.sonuc-kutu {
+    text-align: center;
+}
+
+.sonuc-kutu.gizle {
+    display: none;
+}
+
+.sonuc-kutu h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #009688;
+
+}
+
+.sonuc-kutu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.sonuc-kutu table td {
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000000;
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.sonuc-kutu .btn {
+    margin-right: 20px;
+}
+
+@media(max-width:767px) {
+    .sonuc-kutu .btn {
+        margin-bottom: 15px;
+    }
+    body{
+        padding: 15px;
+    }
+}

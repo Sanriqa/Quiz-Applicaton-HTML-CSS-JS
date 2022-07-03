@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Site Made By Ege"Sanriqa"</title>
+    <style>
+        @import url(index.css);
+    </style>
+</head>
+
+<body>
+    <div class="giris-kutu ozel-kutu">
+        <h3>Quiz:</h3>
+        <p>Toplam Soru Sayısı: <span class="toplam-soru"></span></p>
+        <button type="button" class="btn" onclick="startQuiz()">Başla</button>
+    </div>
+
+    <div class="quiz-kutu ozel-kutu gizle">
+        <div class="soru-sayi">
+   
+        </div>
+        <div class="soru-yazi">
+
+        </div>
+        <div class="secenek-sec">
+         
+        </div>
+        <div class="diger-soru-btn">
+            <button type="button" class="btn" onclick="next()">Devam</button>
+        </div>
+        <div class="soru-gostergesi">
+     
+        </div>
+    </div>
+
+    <div class="sonuc-kutu ozel-kutu gizle">
+        <h1>Quiz Sonuçları</h1>
+        <table>
+            <tr>
+                <td>Toplam Soru</td>
+                <td><span class="toplam-soru"></span></td>
+            </tr>
+            <tr>
+                <td>Cevaplanan Soru</td>
+                <td><span class="toplam-cevaplanan"></span></td>
+            </tr>
+            <tr>
+                <td>Doğru Sayısı</td>
+                <td><span class="toplam-dogru"></span></td>
+            </tr>
+            <tr>
+                <td>Yanlış Sayısı</td>
+                <td><span class="toplam-yanlis"></span></td>
+            </tr>
+            <tr>
+                <td>Yüzde Oranı</td>
+                <td><span class="yuzde"></span></td>
+            </tr>
+            <tr>
+                <td>Toplam Sonuç</td>
+                <td><span class="toplam-sonuc"></span></td>
+            </tr>
+        </table>
+            <button type="button" class="btn" onclick="tekrarDeneQuiz()">Tekrar Dene</button>
+            <button type="button" class="btn" onclick="basaDon()">Başa Dön</button> 
+    </div>
+
+   <script src="sorular.js"></script>
+   <script src="uygulama.js"></script>
+</body>
+
+</html>
